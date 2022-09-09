@@ -3,20 +3,20 @@ measurements = [1,5,9.1,9.2,9.5]
 
 # Subprograms
 # Joules
-def joules(measure):
-    Joules = 10**((1.5*measure)+4.8)
+def getjoules(measurement):
+    Joules = 10**((1.5*measurement)+4.8)
     return Joules
 # TNT
-def tnt(Joules):
+def gettnt(Joules):
     TNT = Joules / (4.184*(10**9))
     return TNT
 print(layout.format("Richter","Joules","TNT"))
 
 # Print table
-for measure in measurements:
-    Joules = joules(measure)
+for measurement in measurements:
+    Joules = joules(measurement)
     TNT = tnt(Joules)
-    print(layout.format(measure,Joules,TNT))
+    print(layout.format(measurement,Joules,TNT))
 
 # Main program
 print("\n")
