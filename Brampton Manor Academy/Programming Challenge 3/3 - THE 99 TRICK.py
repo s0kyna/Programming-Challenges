@@ -16,4 +16,5 @@ def run():
   print("\nI said the answer was",answer,"and the calculation result is",calculation(answer,friends_number))
 
 # Run
-run()
+if __name__ == '__main__':
+  run()
